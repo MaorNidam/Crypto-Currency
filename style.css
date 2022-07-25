@@ -1,0 +1,198 @@
+body::before {
+    display: block;
+    content: '';
+    height: 40px;
+}
+
+body {
+    background-color: #1f3729;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+  }
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #378d58;
+    border-radius: 10px;
+  }
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #58896b;
+  }
+
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.btn-color {
+    color: #56f6b3;
+    border-color: #44cb74;
+}
+
+.parallax {  
+    min-height: 530px; 
+    /* Set a specific height */
+    background-image: url("./images/background.jpeg");
+    /* Create the parallax scrolling effect */
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    
+}
+
+.form-control {
+    width: 200px;
+    margin-right: 5px;
+}
+
+.form-switch {
+    padding-left: 0;
+}
+.form-switch .form-check-input {
+    margin-left: 0;
+    background-color: #404248;
+}
+.form-check-input:checked {
+    background-color: #198754;
+}
+.form-check-input {
+    float: right;
+}
+
+.coin-board {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: transparent;
+}
+.coin-card {
+    display: inline-block;
+    width: 200px;
+    height: 110px;
+    border:2px solid black;
+    margin: 10px;
+    padding: 5px;
+    color: #e3f4f6;
+    border-radius: 10px;
+}
+
+.open-coin-card {
+    height: 200px;
+}
+.card-title {
+    text-decoration: underline;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.moreinfo-img-loader {
+    width: 100px;
+    height: 100px;
+}
+
+.moreinfo-div-loader {
+    padding-left: 40px;
+}
+
+.btn-sm {
+    margin-top: 5px;
+}
+
+.modal-content {
+    color: #e3f4f6;
+}
+
+.modal-coin {
+    border: 1px solid #e3f4f6;
+    padding: 2px;
+}
+
+.profile-img {
+    height: 300px;
+    border-radius: 30px;
+    align-self: flex-start;
+}
+
+.about {
+    display: flex;
+    color: #e3f4f6;
+    border-radius: 30px;
+    border:2px solid #1f3729;
+    font-size: 3rem;
+}
+
+.chart {
+    padding: 10px;
+    border:2px solid #378d58;
+    border-radius: 5px;
+    width: 70%;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-width: 988px) {
+    .about {
+        font-size: 2rem;
+    }
+
+    .profile-img {
+        height: 200px;
+    }
+
+    .chart {
+        width: 100%;
+        height: 300px;
+    }
+
+    .form-control {
+        margin-bottom: 5px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .parallax {
+      background-attachment: scroll;
+      min-height: 0px;
+    }
+
+    body::before {
+        height: 80px;
+    }
+
+    .about {
+        font-size: 1.5rem;
+    }
+
+    .profile-img {
+        height: 200px;
+    }
+
+    .chart {
+        width: 100%;
+        height: 300px;
+    }
+
+    .form-control {
+        margin-bottom: 5px;
+    }
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery-3.4.1.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"> </script> -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+    <title>Crypto</title>
+</head>
+
+<body>
+    <!-- Top navagation Bar -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
+        <div class="container">
+            <a id="title" href="#" class="navbar-brand">Crypto Currency</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse ms-auto" id="navmenu" >
+                <input class="form-control" id="searchCoinInput" type="text" placeholder="Search Coin"> <button
+                    class="btn btn-outline-success btn-color" id="searchCoinButton">Search</button>
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a id="home" href="#" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="liveReports" href="#" class="nav-link">Live Reports</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="about" href="#" class="nav-link">About</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Area -->
+    <div class="parallax">
+        <div id="main" class="container">
+            <div id="loader" class="loader">
+                <img src="./images/loading.gif">
+            </div>
+            
+        </div>
+    </div>
+    <div id="coinBoard" class="coin-board"></div>
+
+    <div class="modal" id="coinSwitchModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content bg-dark">
+            <div class="modal-header">
+              <h5 class="modal-title">Please choose 5 coins.</h5>
+              <button id="modalCloseButton" type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div id="modalBody" class="modal-body">
+            </div>
+            <div id="modalFooter" class="modal-body">
+
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+
+</html>
